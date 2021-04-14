@@ -43,14 +43,22 @@ class Dialogue extends StatelessWidget {
                     textConfirm: 'Conform',
                     confirmTextColor: Colors.white,
                     onCancel: () {},
-                    onConfirm: () {},
+                    onConfirm: () {
+                      Get.back();
+                    },
                     buttonColor: Colors.green,
                     radius: 30,
                   );
                 },
                 child: Text('Show Dialogue'),
               ),
-            )
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('bottomsheet');
+              },
+              child: Text('Go to bottom sheet'),
+            ),
           ],
         ),
       ),

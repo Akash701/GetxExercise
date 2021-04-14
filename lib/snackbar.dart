@@ -29,6 +29,15 @@ class Snackbar extends StatelessWidget {
               child: Text('Show SnackBar'),
             ),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Get.toNamed('dialouge');
+            },
+            child: Text('Go back to dialog'),
+          ),
+          SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
