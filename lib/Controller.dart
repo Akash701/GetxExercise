@@ -12,11 +12,11 @@ class Controller extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<MyController>(
-              // init: MyController(),
-              builder: (controller) =>
-                  Text('The value is ${myController.count}'),
-            ),
+            // GetBuilder<MyController>(
+            //   // init: MyController(),
+            //   builder: (controller) =>
+            //       Text('The value is ${myController.count}'),
+            // ),
             SizedBox(
               height: 20,
             ),
@@ -26,7 +26,15 @@ class Controller extends StatelessWidget {
                 myController.increment();
               },
               child: Text('Increment'),
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.all(16),
+              child: TextField(
+                onChanged: (val) {
+                  myController.increment();
+                },
+              ),
+            ),
           ],
         ),
       ),
